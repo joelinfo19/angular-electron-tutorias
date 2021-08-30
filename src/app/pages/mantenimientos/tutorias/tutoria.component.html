@@ -1,0 +1,188 @@
+<div class="row" xmlns:name="http://www.w3.org/1999/xhtml">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+
+        <h4 class="card-title">Médico</h4>
+        <h6 class="card-subtitle">Actualizar información</h6>
+
+        <form class="form-horizontal p-t-20"
+              [formGroup]="tutoriaForm"
+              (submit)="guardarTutoria()">
+
+<!--          <div class="form-group row"-->
+<!--               *ngIf="tutoriaSeleccionado">-->
+<!--            <label for="exampleInputuname3" class="col-sm-3 control-label">Foto</label>-->
+<!--            <div class="col-sm-9">-->
+<!--              <div class="input-group">-->
+<!--                <img [src]="tutoriaSeleccionado.img | imagen: 'medicos'"-->
+<!--                     class="w200"/>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+          <div class="form-group row">
+            <label for="exampleInputuname3" class="col-sm-3 control-label">Direccion</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <input type="text"
+                       formControlName="direccion"
+                       class="form-control"
+                       id="exampleInputuname3"
+                       placeholder="Direccion">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputuname3" class="col-sm-3 control-label">Codigo</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <input type="text"
+                       formControlName="codigo"
+                       class="form-control"
+                       id="exampleInputuname4"
+                       placeholder="Codigo de la tutoria">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputuname3" class="col-sm-3 control-label">Fecha</label>
+            <div class="col-sm-9">
+              <div class="input-group ">
+<!--                <div class="input-group-addon"><i class="ti-user"></i></div>-->
+                <input type="text"
+                       formControlName="fecha"
+                       class="form-control"
+                       placeholder="mm/dd/yyyy"
+                       name="dp"
+                       [(ngModel)]="model"
+                       ngbDatepicker #d="ngbDatepicker"
+                >
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+                    <i class="icon-calender"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--          <div class="example">-->
+<!--            <h5 class="box-title m-t-30">Autoclose Datedpicker</h5>-->
+<!--            <p class="text-muted m-b-20">just add class <code>.complex-colorpicker</code> to create it.</p>-->
+<!--            <div class="input-group">-->
+<!--              <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy">-->
+<!--              <span class="input-group-addon"><i class="icon-calender"></i></span> </div>-->
+<!--          </div>-->
+<!--          <div class="input-group">-->
+<!--            <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy">-->
+<!--            <span class="input-group-addon"><i class="icon-calender"></i></span> </div>-->
+
+<!--          <div class="popover clockpicker-popover bottom clockpicker-align-left" style="display: none; top: 755px; left: 285px;"><div class="arrow"></div><div class="popover-title"><span class="clockpicker-span-hours text-primary">13</span> : <span class="clockpicker-span-minutes">14</span><span class="clockpicker-span-am-pm"></span></div><div class="popover-content"><div class="clockpicker-plate"><div class="clockpicker-canvas"><svg class="clockpicker-svg" width="200" height="200"><g transform="translate(100,100)"><line x1="0" y1="0" x2="39.99999999999999" y2="-69.2820323027551"></line><circle class="clockpicker-canvas-fg" r="3.5" cx="39.99999999999999" cy="-69.2820323027551"></circle><circle class="clockpicker-canvas-bg" r="13" cx="39.99999999999999" cy="-69.2820323027551"></circle><circle class="clockpicker-canvas-bearing" cx="0" cy="0" r="2"></circle></g></svg></div><div class="clockpicker-dial clockpicker-hours" style="visibility: visible;"><div class="clockpicker-tick" style="left: 87px; top: 7px;">00</div><div class="clockpicker-tick" style="left: 114px; top: 40.2346px; font-size: 120%;">1</div><div class="clockpicker-tick" style="left: 133.765px; top: 60px; font-size: 120%;">2</div><div class="clockpicker-tick" style="left: 141px; top: 87px; font-size: 120%;">3</div><div class="clockpicker-tick" style="left: 133.765px; top: 114px; font-size: 120%;">4</div><div class="clockpicker-tick" style="left: 114px; top: 133.765px; font-size: 120%;">5</div><div class="clockpicker-tick" style="left: 87px; top: 141px; font-size: 120%;">6</div><div class="clockpicker-tick" style="left: 60px; top: 133.765px; font-size: 120%;">7</div><div class="clockpicker-tick" style="left: 40.2346px; top: 114px; font-size: 120%;">8</div><div class="clockpicker-tick" style="left: 33px; top: 87px; font-size: 120%;">9</div><div class="clockpicker-tick" style="left: 40.2346px; top: 60px; font-size: 120%;">10</div><div class="clockpicker-tick" style="left: 60px; top: 40.2346px; font-size: 120%;">11</div><div class="clockpicker-tick" style="left: 87px; top: 33px; font-size: 120%;">12</div><div class="clockpicker-tick" style="left: 127px; top: 17.718px;">13</div><div class="clockpicker-tick" style="left: 156.282px; top: 47px;">14</div><div class="clockpicker-tick" style="left: 167px; top: 87px;">15</div><div class="clockpicker-tick" style="left: 156.282px; top: 127px;">16</div><div class="clockpicker-tick" style="left: 127px; top: 156.282px;">17</div><div class="clockpicker-tick" style="left: 87px; top: 167px;">18</div><div class="clockpicker-tick" style="left: 47px; top: 156.282px;">19</div><div class="clockpicker-tick" style="left: 17.718px; top: 127px;">20</div><div class="clockpicker-tick" style="left: 7px; top: 87px;">21</div><div class="clockpicker-tick" style="left: 17.718px; top: 47px;">22</div><div class="clockpicker-tick" style="left: 47px; top: 17.718px;">23</div></div><div class="clockpicker-dial clockpicker-minutes clockpicker-dial-out" style="visibility: hidden;"><div class="clockpicker-tick" style="left: 87px; top: 7px; font-size: 120%;">00</div><div class="clockpicker-tick" style="left: 127px; top: 17.718px; font-size: 120%;">05</div><div class="clockpicker-tick" style="left: 156.282px; top: 47px; font-size: 120%;">10</div><div class="clockpicker-tick" style="left: 167px; top: 87px; font-size: 120%;">15</div><div class="clockpicker-tick" style="left: 156.282px; top: 127px; font-size: 120%;">20</div><div class="clockpicker-tick" style="left: 127px; top: 156.282px; font-size: 120%;">25</div><div class="clockpicker-tick" style="left: 87px; top: 167px; font-size: 120%;">30</div><div class="clockpicker-tick" style="left: 47px; top: 156.282px; font-size: 120%;">35</div><div class="clockpicker-tick" style="left: 17.718px; top: 127px; font-size: 120%;">40</div><div class="clockpicker-tick" style="left: 7px; top: 87px; font-size: 120%;">45</div><div class="clockpicker-tick" style="left: 17.718px; top: 47px; font-size: 120%;">50</div><div class="clockpicker-tick" style="left: 47px; top: 17.718px; font-size: 120%;">55</div></div></div><span class="clockpicker-am-pm-block"></span></div></div>-->
+          <div class="form-group row">
+            <label for="exampleInputuname3" class="col-sm-3 control-label">Tipo de Tutoria</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <input type="text"
+                       formControlName="tipoTutoria"
+                       class="form-control"
+                       id="exampleInputuname6"
+                       placeholder="Clase de tutoria">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputuname3" class="col-sm-3 control-label">Descripcion</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <input type="text"
+                       formControlName="descripcion"
+                       class="form-control"
+                       id="exampleInputuname7"
+                       placeholder="Descripcion">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label for="exampleInputEmail3" class="col-sm-3 control-label">Docente</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <select class="form-control"
+                        formControlName="docente">
+                  <option value="">Seleccione docente</option>
+                  <option *ngFor="let docente of docentes"
+                          [value]="docente._id">
+                    {{ docente.nombre }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputEmail3" class="col-sm-3 control-label">Estudiante</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <select class="form-control"
+                        formControlName="estudiante">
+                  <option value="">Seleccione Estudiante</option>
+                  <option *ngFor="let estudiante of estudiantes"
+                          [value]="estudiante._id">
+                    {{ estudiante.nombre }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row m-b-0">
+            <div class="offset-sm-3 col-sm-9">
+              <button type="submit"
+                      [disabled]="tutoriaForm.invalid"
+                      class="btn btn-success waves-effect waves-light">
+                <i class="fa fa-save"></i>
+                Guardar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col animated fadeIn fast"
+       *ngIf="estudianteSeleccionado">
+    <div class="card">
+      <div class="card-body">
+
+        <h4 class="card-title">Hospital</h4>
+        <h6 class="card-subtitle">{{ estudianteSeleccionado.nombre }}</h6>
+
+        <img [src]="estudianteSeleccionado.img | imagen:'estudiantes'"
+             class="img-thumbnail"/>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col animated fadeIn fast"
+       *ngIf="docenteSeleccionado">
+    <div class="card">
+      <div class="card-body">
+
+        <h4 class="card-title">Hospital</h4>
+        <h6 class="card-subtitle">{{ docenteSeleccionado.nombre }}</h6>
+
+        <img [src]="docenteSeleccionado.img | imagen:'docentes'"
+             class="img-thumbnail"/>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

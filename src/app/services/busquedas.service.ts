@@ -4,6 +4,9 @@ import {Usuario} from '../models/usuario.model';
 import {map} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
 import {Estudiante} from '../models/estudiante.model';
+import {Docente} from '../models/docente.model';
+import {Tutoria} from '../models/tutoria.model';
+
 const base_url = environment.base_url;
 
 @Injectable({
@@ -35,14 +38,17 @@ export class BusquedasService {
     return resultados;
   }
   //
-  // private transformarMedicos( resultados: any[] ): Medico[] {
-  //   return resultados;
-  // }
+  private transformarDocentes( resultados: any[] ): Docente[] {
+    return resultados;
+  }
+  private transformarTutorias( resultados: any[] ): Tutoria[] {
+    return resultados;
+  }
   busquedaGlobal(termino: string){
     const url = `${base_url}/todo/${termino}`;
     return this.http.get(url, this.headers);
   }
-  buscar(tipo: 'usuarios'|'estudiantes'|'docentes',
+  buscar(tipo: 'usuarios'|'estudiantes'|'docentes'|'tutorias',
          termino: string){
     const url = `${base_url}/todo/coleccion/${tipo}/${termino}`;
     return this.http.get<any[]>(url, this.headers)
@@ -55,8 +61,10 @@ export class BusquedasService {
             case 'estudiantes':
               return this.transformarEstudiantes( resp.resultados );
 
-            // case 'medicos':
-            //   return this.transformarMedicos( resp.resultados );
+            case 'docentes':
+              return this.transformarDocentes( resp.resultados );
+            case 'tutorias':
+              return this.transformarTutorias( resp.resultados );
 
             default:
               return [];

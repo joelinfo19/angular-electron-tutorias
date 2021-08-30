@@ -14,6 +14,9 @@ import { DocentesComponent } from './mantenimientos/docentes/docentes.component'
 import { TutoriasComponent } from './mantenimientos/tutorias/tutorias.component';
 import {PipesModule} from '../pipes/pipes.module';
 import {EstudianteComponent} from './mantenimientos/estudiantes/estudiante.component';
+import {DocenteComponent} from './mantenimientos/docentes/docente.component';
+import {TutoriaComponent} from './mantenimientos/tutorias/tutoria.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,8 +29,10 @@ import {EstudianteComponent} from './mantenimientos/estudiantes/estudiante.compo
     AccountSettingsComponent,
     EstudiantesComponent,
     DocentesComponent,
+    DocenteComponent,
     TutoriasComponent,
-    EstudianteComponent
+    EstudianteComponent,
+    TutoriaComponent
 
   ],
   exports: [
@@ -42,7 +47,9 @@ import {EstudianteComponent} from './mantenimientos/estudiantes/estudiante.compo
         AppRoutingModule,
         ComponentsModule,
         FormsModule,
-        PipesModule
+        PipesModule,
+        NgbModule
+
     ]
 })
 export class PagesModule { }

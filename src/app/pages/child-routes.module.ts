@@ -10,6 +10,9 @@ import {AccountSettingsComponent} from './account-settings/account-settings.comp
 import {EstudiantesComponent} from './mantenimientos/estudiantes/estudiantes.component';
 import {DocentesComponent} from './mantenimientos/docentes/docentes.component';
 import {EstudianteComponent} from './mantenimientos/estudiantes/estudiante.component';
+import {DocenteComponent} from './mantenimientos/docentes/docente.component';
+import {TutoriaComponent} from './mantenimientos/tutorias/tutoria.component';
+import {TutoriasComponent} from './mantenimientos/tutorias/tutorias.component';
 
 
 const childRoutes: Routes = [
@@ -26,6 +29,11 @@ const childRoutes: Routes = [
   // mantenimientos
   { path: 'estudiantes', component: EstudiantesComponent, data: { titulo: 'Matenimiento de Estudiantes' }},
   { path: 'docentes', component: DocentesComponent, data: { titulo: 'Matenimiento de Docentes' }},
+  { path: 'tutorias', component: TutoriasComponent, data: { titulo: 'Matenimiento de Tutorias' }},
+
+  { path: 'docente/:id', component: DocenteComponent, data: { titulo: 'Matenimiento de Docentes' }},
+  { path: 'tutoria/:id', component: TutoriaComponent, data: { titulo: 'Matenimiento de Tutorias' }},
+
   // { path: 'medico/:id', component: MedicoComponent, data: { titulo: 'Matenimiento de Medicos' }},
 
 

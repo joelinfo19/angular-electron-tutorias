@@ -2,7 +2,7 @@
 export class Estudiante {
 
   constructor(
-    public nombre: string,
+    public nombre?: string,
     public codigo?: string,
     public escuela?: string,
     public codigoEp?: string,
