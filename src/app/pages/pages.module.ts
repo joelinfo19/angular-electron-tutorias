@@ -17,6 +17,7 @@ import {EstudianteComponent} from './mantenimientos/estudiantes/estudiante.compo
 import {DocenteComponent} from './mantenimientos/docentes/docente.component';
 import {TutoriaComponent} from './mantenimientos/tutorias/tutoria.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 
@@ -32,7 +33,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DocenteComponent,
     TutoriasComponent,
     EstudianteComponent,
-    TutoriaComponent
+    TutoriaComponent,
+    BusquedaComponent
 
   ],
   exports: [

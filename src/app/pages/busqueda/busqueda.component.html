@@ -1,0 +1,159 @@
+<div class="row animated fadeIn fast">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h3>Usuarios</h3>
+        <div class="alert alert-info animated fadeIn fast"
+             *ngIf="usuarios.length===0">
+          <p class="mb-0">
+            No hay usuarios con ese termino
+          </p>
+
+        </div>
+        <div class="table-responsive"
+             *ngIf="usuarios.length>0">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Avatar</th>
+              <th>Nombre</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let usuario of usuarios" class="animated fadeIn fast">
+              <td><img [src]="usuario.img|imagen:'usuarios'" class="w75"></td>
+              <td>{{usuario.nombre}}</td>
+
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h3>Estudiantes</h3>
+        <div class="alert alert-info animated fadeIn fast" *ngIf="estudiantes.length===0">
+          <p class="mb-0">
+            No hay estudiantes con ese termino
+          </p>
+
+        </div>
+        <div class="table-responsive" *ngIf="estudiantes.length>0">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Nombre</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let estudiante of estudiantes" class="animated fadeIn fast">
+              <td><img [src]="estudiante.img|imagen:'estudiantes'" class="w75"></td>
+              <td>
+
+                <a [routerLink]="['/dashboard/estudiante',estudiante._id]">
+                  {{estudiante.nombre}}
+
+                </a>
+              </td>
+
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h3>Docentes</h3>
+        <div class="alert alert-info animated fadeIn fast"
+             *ngIf="docentes.length===0 "
+        >
+          <p class="mb-0">
+            No hay docentes con ese termino
+          </p>
+
+        </div>
+        <div class="table-responsive"
+             *ngIf="docentes.length>0">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Nombre</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let docente of docentes" class="animated fadeIn fast">
+              <td><img [src]="docente.img|imagen:'docentes'" class="w75"></td>
+              <td>
+                <a [routerLink]="['/dashboard/docente',docente._id]">
+                  {{docente.nombre}}
+
+                </a>
+
+              </td>
+
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h3>Tutorias</h3>
+        <div class="alert alert-info animated fadeIn fast"
+             *ngIf="tutorias.length===0 "
+        >
+          <p class="mb-0">
+            No hay tutorias con ese termino
+          </p>
+
+        </div>
+        <div class="table-responsive"
+             *ngIf="tutorias.length>0">
+          <table class="table">
+            <thead>
+            <tr>
+
+              <th>Tipo de tutoria</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tutoria of tutorias" class="animated fadeIn fast">
+              <td>
+                <a [routerLink]="['/dashboard/tutoria',tutoria._id]">
+                  {{tutoria.tipoTutoria}}
+
+                </a>
+
+              </td>
+
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

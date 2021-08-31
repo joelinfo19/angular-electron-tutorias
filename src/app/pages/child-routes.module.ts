@@ -13,12 +13,13 @@ import {EstudianteComponent} from './mantenimientos/estudiantes/estudiante.compo
 import {DocenteComponent} from './mantenimientos/docentes/docente.component';
 import {TutoriaComponent} from './mantenimientos/tutorias/tutoria.component';
 import {TutoriasComponent} from './mantenimientos/tutorias/tutorias.component';
+import {BusquedaComponent} from './busqueda/busqueda.component';
 
 
 const childRoutes: Routes = [
   {path: '', component: DashboardComponent, data: {titulo: 'Dashboard'}},
   // {path: 'grafica1', component: Grafica1Component, data: {titulo: 'Grafica #1'}},
-  // {path: 'buscar/:termino', component: BusquedaComponent, data: {titulo: 'Busquedas'}},
+  {path: 'buscar/:termino', component: BusquedaComponent, data: {titulo: 'Busquedas'}},
   // {path: 'progress', component: ProgressComponent, data: {titulo: 'ProgressBar'}},
   {path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Ajustes'}},
   // {path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesass'}},

@@ -73,8 +73,8 @@ export class TutoriasComponent implements OnInit {
   borrarTutoria( tutoria: Tutoria ) {
 
     Swal.fire({
-      title: '¿Borrar médico?',
-      text: `Esta a punto de borrar a ${ tutoria.descripcion }`,
+      title: '¿Borrar tutoria?',
+      text: `Esta a punto de borrar a tutoria ${ tutoria.codigo }`,
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Si, borrarlo'
@@ -86,8 +86,8 @@ export class TutoriasComponent implements OnInit {
 
             this.cargarTutorias();
             Swal.fire(
-              'Médico borrado',
-              `${ tutoria.descripcion } fue eliminado correctamente`,
+              'Tutoria borrada',
+              `${ tutoria.codigo } fue eliminado correctamente`,
               'success'
             );
 
