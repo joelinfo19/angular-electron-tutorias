@@ -13,7 +13,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
+First Run `ng build --base-href "./"` to build the project for electron. 
+Run `npm run electron-start` to build in electron environment
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
