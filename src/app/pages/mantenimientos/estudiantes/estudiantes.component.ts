@@ -15,7 +15,8 @@ import {Subscription} from 'rxjs';
 })
 export class EstudiantesComponent implements OnInit, OnDestroy {
   public cargando: boolean = true;
-  public totalUsuarios:number=0
+  public totalEstudiantes:number=0
+
   public desde:number=0
   public estudiantes: Estudiante[] = [];
   private imgSubs: Subscription;
@@ -57,7 +58,6 @@ export class EstudiantesComponent implements OnInit, OnDestroy {
         this.cargando = false;
         this.estudiantes = estudiantes;
       })
-
   }
   eliminarEstudiante(estudiante:Estudiante){
 
@@ -90,7 +90,7 @@ export class EstudiantesComponent implements OnInit, OnDestroy {
     this.desde+=valor
     if(this.desde<0){
       this.desde=0
-    }else if(this.desde>=this.totalUsuarios){
+    }else if(this.desde>=this.totalEstudiantes){
       this.desde-=valor
 
     }

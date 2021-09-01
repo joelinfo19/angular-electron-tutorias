@@ -101,6 +101,7 @@ export class TutoriaComponent implements OnInit {
 
     this.estudianteService.cargarEstudiantes()
       .subscribe( (estudiantes: Estudiante[]) => {
+
         this.estudiantes = estudiantes;
       })
 

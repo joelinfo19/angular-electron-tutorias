@@ -26,7 +26,7 @@ describe('LoginComponent', () => {
     component=new LoginComponent(null,new FormBuilder(),null,undefined)
   })
 
-  it('Login formulario debe crear un formulario con 3 campos', () => {
+  it('Login formulario debe crear un formulario con 3 campos UNIT TEST', () => {
     expect(component.loginForm.contains("email")).toBeTruthy();
     expect(component.loginForm.contains("password")).toBeTruthy();
     expect(component.loginForm.contains("remember")).toBeTruthy();

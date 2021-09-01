@@ -1,25 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EstudiantesComponent } from './estudiantes.component';
+import {DocentesComponent} from '../docentes/docentes.component';
+import {DocenteService} from '../../../services/docente.service';
+import {HttpClientModule} from '@angular/common/http';
+import {EstudianteService} from '../../../services/estudiante.service';
 
-xdescribe('EstudiantesComponent', () => {
+describe('EstudiantesComponent', () => {
   let component: EstudiantesComponent;
   let fixture: ComponentFixture<EstudiantesComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ EstudiantesComponent ]
+  beforeEach(()=>{
+    TestBed.configureTestingModule({
+      declarations:[EstudiantesComponent],
+      providers:[EstudianteService],
+      imports:[HttpClientModule]
+
     })
-    .compileComponents();
-  });
+    fixture=TestBed.createComponent(EstudiantesComponent);
+    component=fixture.componentInstance;
+  })
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(EstudiantesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  it('Debe de crearse el componente estudiante', () => {
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeTruthy()
+
   });
 });

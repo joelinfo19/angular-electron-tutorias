@@ -22,7 +22,7 @@ describe('RegisterComponent', () => {
   //   fixture.detectChanges();
   // });
 
-  it('Debe de crear un formulario', () => {
+  it('Debe de crear un formulario (UNIT TEST)', () => {
     expect(component.registerForm.contains('nombre')).toBeTruthy();
   });
 });
