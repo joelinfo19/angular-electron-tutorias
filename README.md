@@ -15,6 +15,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 * First Run `ng build --base-href "./"` to build the project for electron. 
 * Run `npm run electron-start` to build in electron environment
+* For join in dashboard, you register
 
 ## Running unit tests
 
